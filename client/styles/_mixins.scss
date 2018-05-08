@@ -1,0 +1,11 @@
+@mixin breakpoint($namedBreakpoint) {
+
+    @if map-has-key($breakpoints, $namedBreakpoint) {
+        @media (min-width: #{map-get($breakpoints, $namedBreakpoint)}) {
+            @content;
+        }
+    } @else {
+        @error 'No named breakpoint called: #{$namedBreakpoint}';
+    }
+
+}
