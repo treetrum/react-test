@@ -1,0 +1,27 @@
+// Typography
+// ----------
+
+body {
+    font-family: $font;
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+a {
+    transition: .2s ease color;
+    color: $blue;
+    text-decoration: none;
+    
+    &:hover {
+        color: lighten($blue, 10%);
+    }
+}
