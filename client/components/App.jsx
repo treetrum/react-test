@@ -22,8 +22,8 @@ class App extends React.Component {
 
         this.state = {
             product: productData,
-            currentTab: 0,
-            currentColour: 0,
+            currentTab: Object.keys(productData.tabs)[0],
+            currentColour: Object.keys(productData.colours)[0],
             addedToCart: false,
             addingToCart: false
         }
@@ -56,7 +56,7 @@ class App extends React.Component {
     handleColourChange(event) {
         event.preventDefault();
         this.setState({
-            currentColour: Number(event.target.value)
+            currentColour: event.target.value
         });
     }
 
@@ -110,7 +110,7 @@ class App extends React.Component {
                     <Variations
                         colours={product.colours}
                         changeColour={this.handleColourChange}
-                        currentColourIndex={this.state.currentColour}
+                        currentColour={this.state.currentColour}
                     />
 
                     <Actions

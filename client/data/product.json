@@ -1,28 +1,28 @@
 {
     "title": "Audio-Technica ATH-MSR7",
     "subtitle": "2017 Best Headphones of the Year Award Winner",
-    "tabs": [
-        {
+    "tabs": {
+        "description": {
             "name": "Description",
             "content": "This is the description of the product. Consequuntur, mollitia corporis. Maxime id magni sed odio quis, ea quaerat consectetur vel obcaecati porro repellendus nulla quisquam praesentium quod facere est."
         },
-        {
+        "details": {
             "name": "Details",
             "content": "Details for the product will be shown here. Consequuntur, mollitia corporis. Maxime id magni sed odio quis, ea quaerat consectetur vel."
         }
-    ],
+    },
     "price": {
         "original": "89.99",
         "discounted": "59.99"
     },
-    "colours": [
-        {
+    "colours": {
+        "black": {
             "name": "Black",
             "image": "ath-msr7-black.jpg"
         },
-        {
+        "brown": {
             "name": "Brown",
             "image": "ath-msr7-brown.jpg"
         }
-    ]
+    }
 }

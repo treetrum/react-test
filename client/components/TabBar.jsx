@@ -4,13 +4,13 @@ import TabBarItem from './TabBarItem.jsx';
 const TabBar = ({ tabs, activeTabIndex, switchTab }) => {
     return (
         <nav className="tab-bar">
-            {tabs.map((tab, index) =>
+            { Object.keys(tabs).map((key, index) => 
                 <TabBarItem
-                    tab={tab}
-                    index={index}
+                    tab={tabs[key]}
+                    currentKey={key}
                     activeTabIndex={activeTabIndex}
                     switchTab={switchTab}
-                    key={index}
+                    key={key}
                 />
             )}
         </nav>

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TabBarItem = ({ tab, index, activeTabIndex, switchTab }) => {
+const TabBarItem = ({ tab, currentKey, activeTabIndex, switchTab }) => {
     return (
-        <li className={index == activeTabIndex ? 'active' : ''}>
-            <a onClick={() => switchTab(index)} >
+        <li className={currentKey == activeTabIndex ? 'active' : ''}>
+            <a onClick={() => switchTab(currentKey)} >
                 {tab.name}
             </a>
         </li>
