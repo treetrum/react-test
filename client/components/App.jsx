@@ -11,6 +11,7 @@ import productData from '../data/product.json';
 import TabBar from './TabBar.jsx';
 import ContentArea from './ContentArea.jsx';
 import Actions from './Actions.jsx';
+import Variations from './Variations.jsx';
 
 class App extends React.Component {
 
@@ -28,6 +29,7 @@ class App extends React.Component {
 
         this.switchToTab = this.switchToTab.bind(this);
         this.addToCart = this.addToCart.bind(this);
+        this.handleColourChange = this.handleColourChange.bind(this);
     }
 
     switchToTab(newTabIndex) {
@@ -47,6 +49,13 @@ class App extends React.Component {
                     addedToCart: true
                 });
             }, 2000);
+        });
+    }
+
+    handleColourChange(event) {
+        event.preventDefault();
+        this.setState({
+            currentColour: Number(event.target.value)
         });
     }
 
@@ -98,13 +107,11 @@ class App extends React.Component {
                         </p>
                     </section>
 
-                    <section className="variations">
-                        <label htmlFor="colors">Colors</label>
-                        <select name="colors" id="colors">
-                            <option value="black">Black</option>
-                            <option value="brown">Brown</option>
-                        </select>
-                    </section>
+                    <Variations
+                        colours={product.colours}
+                        changeColour={this.handleColourChange}
+                        currentColourIndex={this.state.currentColour}
+                    />
 
                     <Actions
                         addToCart={this.addToCart}
