@@ -4,11 +4,11 @@
     "tabs": [
         {
             "name": "Description",
-            "content": "Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, mollitia corporis. Maxime id magni sed odio quis, ea quaerat consectetur vel obcaecati porro repellendus nulla quisquam praesentium quod facere est."
+            "content": "This is the description of the product. Consequuntur, mollitia corporis. Maxime id magni sed odio quis, ea quaerat consectetur vel obcaecati porro repellendus nulla quisquam praesentium quod facere est."
         },
         {
             "name": "Details",
-            "content": "Details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, mollitia corporis. Maxime id magni sed odio quis, ea quaerat consectetur vel obcaecati porro repellendus nulla quisquam praesentium quod facere est."
+            "content": "Details for the product will be shown here. Consequuntur, mollitia corporis. Maxime id magni sed odio quis, ea quaerat consectetur vel."
         }
     ],
     "price": {

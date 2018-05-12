@@ -9,10 +9,12 @@ import productData from '../data/product.json';
 
 // Components
 import TabBar from './TabBar.jsx';
+import ContentArea from './ContentArea.jsx';
 
 class App extends React.Component {
 
     constructor(props) {
+
         super(props);
 
         this.state = {
@@ -36,9 +38,11 @@ class App extends React.Component {
 
         return (
             <div className="product-page">
+
                 <div className="product-image">
-                    <img src="../../client/resources/images/ath-msr7-black.jpg" alt=""/>
+                    <img src="../../client/resources/images/ath-msr7-black.jpg" />
                 </div>
+
                 <div className="product-detail">
 
                     <section className="back-link">
@@ -63,11 +67,7 @@ class App extends React.Component {
                         switchTab={this.switchToTab} 
                     />
 
-                    <article className="content-area">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, mollitia corporis. Maxime id magni sed odio quis, ea quaerat consectetur vel obcaecati porro repellendus nulla quisquam praesentium quod facere est.
-                        </p>
-                    </article>
+                    <ContentArea tabs={product.tabs} currentTabIndex={this.state.currentTab} />
 
                     <section className="price">
                         <p>
