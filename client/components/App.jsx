@@ -1,5 +1,8 @@
 import React from 'react';
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faArrowLeft from '@fortawesome/fontawesome-free-solid/faArrowLeft';
+
 class App extends React.Component {
     render() {
         return (
@@ -9,7 +12,10 @@ class App extends React.Component {
                 </div>
                 <div className="product-detail">
                     <section className="back-link">
-                        <a href="#">All Products</a>
+                        <a href="#">
+                            <FontAwesomeIcon icon={faArrowLeft} />
+                            All Products
+                        </a>
                     </section>
                     <header>
                         <h1 className="product-title">

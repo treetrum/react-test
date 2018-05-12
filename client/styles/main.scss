@@ -8,7 +8,7 @@
 // Import Google Fonts
 // -------------------
 
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Cabin:300,400,500,600,700');
 
 // Base Styles
 // -----------
@@ -78,8 +78,17 @@ body {
         }
 
         .back-link {
+
+            .svg-inline--fa {
+                margin-right: 10px;
+                opacity: .25;
+                
+            }
+
             a {
                 color: $textColor;
+                font-size: 14px;
+                font-weight: 300;
                 &:hover {
                     color: $blue;
                 }
