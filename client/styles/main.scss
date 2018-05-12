@@ -31,7 +31,6 @@ body {
 .product-page {
 
     display: grid;
-    margin-top: 100px;
     border-radius: 5px;   
     background-color: $white;
     color: $textColor;
@@ -43,13 +42,14 @@ body {
     }
 
     @include breakpoint(medium) {
+        margin-top: 50px;        
         grid-template-columns: 3fr 2fr;
         grid-template-areas: 'detail image';
     }
 
     @include breakpoint(large) {
+        margin-top: 100px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 'detail image';
     }
 
     .product-image {
@@ -66,6 +66,7 @@ body {
         img {
             width: 100%;
             height: auto;
+            transition: .2s ease all;
         }
     }
 
@@ -74,8 +75,18 @@ body {
         grid-area: detail;
 
         & > * {
-            padding-right: 80px;
-            padding-left: 80px;
+            padding-right: 30px;
+            padding-left: 30px;
+            
+            @include breakpoint(medium) {
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+
+            @include breakpoint(large) {
+                padding-right: 80px;
+                padding-left: 80px;
+            }
         }
 
         .back-link {
@@ -105,6 +116,7 @@ body {
             }
 
             .subtitle {
+                font-size: 14px;
                 font-weight: 700;
                 letter-spacing: .5px;
                 opacity: .25;
@@ -126,7 +138,8 @@ body {
 
                 &.active {
                     a::after {
-                        display: block;
+                        width: 100%;
+                        opacity: 1;
                     }
                 }
 
@@ -146,16 +159,17 @@ body {
                     }
 
                     &::after {
-                        display: none;
                         position: absolute;
                         bottom: 0;
-                        left: 0;
-                        width: 100%;
+                        left: 50%;
+                        width: 0%;
                         height: 4px;
-                        transform: translateY(50%);
+                        transform: translateX(-50%) translateY(50%);
+                        transition: .3s ease all;
                         border-radius: 2px;
                         background-color: $blue;
                         content: '';
+                        opacity: 0;
                     }
                 }
             }
@@ -196,6 +210,7 @@ body {
                 padding: 10px;
                 padding-right: 40px;
                 border: 1px solid hsl(0, 0, 80%);
+                border-radius: 5px;
                 background-color: $white;
                 background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8'?%3e%3csvg version='1.1' viewBox='0 0 8 4' xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3edropdown-chevron%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cg fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='7.4497 0 4.2249 3.2249 1 0' stroke='%23979797'/%3e%3c/g%3e%3c/svg%3e ");
                 background-repeat: no-repeat;
@@ -215,6 +230,7 @@ body {
 
             .notice {
                 margin-top: 20px;
+                color: $blue;
             }
 
             .buttons {
@@ -222,7 +238,9 @@ body {
                 align-items: center;
     
                 button {
-                    padding: 20px 80px;
+                    display: block;
+                    width: 100%;
+                    padding: 20px;
                     transition: .2s ease background-color;
                     border: 0;
                     border-radius: 5px;
@@ -233,6 +251,12 @@ body {
                     letter-spacing: 1px;
                     text-transform: uppercase;
                     cursor: pointer;
+
+                    @include breakpoint(medium) {
+                        display: inline-block;
+                        width: auto;
+                        padding: 20px 80px;                        
+                    }
     
                     &:hover {
                         background-color: lighten($blue, 5%);
