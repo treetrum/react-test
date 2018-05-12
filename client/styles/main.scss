@@ -100,8 +100,8 @@ body {
             margin-top: 40px;
 
             .product-title {
-                font-size: 2rem;
                 margin-bottom: 5px;
+                font-size: 2rem;
             }
 
             .subtitle {
@@ -139,6 +139,7 @@ body {
                     font-weight: 600;
                     letter-spacing: .5px;
                     text-transform: uppercase;
+                    cursor: pointer;
 
                     &:hover {
                         color: $blue;
@@ -195,6 +196,7 @@ body {
                 padding: 10px;
                 padding-right: 40px;
                 border: 1px solid hsl(0, 0, 80%);
+                background-color: $white;
                 background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8'?%3e%3csvg version='1.1' viewBox='0 0 8 4' xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3edropdown-chevron%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cg fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='7.4497 0 4.2249 3.2249 1 0' stroke='%23979797'/%3e%3c/g%3e%3c/svg%3e ");
                 background-repeat: no-repeat;
                 background-position: right 10px center;
@@ -205,28 +207,36 @@ body {
         }
 
         .actions {
-            display: flex;
-            align-items: center;
+
             margin-top: 40px;
             padding-top: 40px;
             padding-bottom: 40px;
             border-top: 1px solid $background;
 
-            button {
-                padding: 20px 80px;
-                transition: .2s ease background-color;
-                border: 0;
-                border-radius: 5px;
-                background-color: $blue;
-                color: $white;
-                font-family: $font;
-                font-size: 14px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                cursor: pointer;
+            .notice {
+                margin-top: 20px;
+            }
 
-                &:hover {
-                    background-color: lighten($blue, 5%);
+            .buttons {
+                display: flex;
+                align-items: center;
+    
+                button {
+                    padding: 20px 80px;
+                    transition: .2s ease background-color;
+                    border: 0;
+                    border-radius: 5px;
+                    background-color: $blue;
+                    color: $white;
+                    font-family: $font;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+    
+                    &:hover {
+                        background-color: lighten($blue, 5%);
+                    }
                 }
             }
         }

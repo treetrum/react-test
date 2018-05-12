@@ -10,6 +10,7 @@ import productData from '../data/product.json';
 // Components
 import TabBar from './TabBar.jsx';
 import ContentArea from './ContentArea.jsx';
+import Actions from './Actions.jsx';
 
 class App extends React.Component {
 
@@ -20,15 +21,32 @@ class App extends React.Component {
         this.state = {
             product: productData,
             currentTab: 0,
-            currentColour: 0
+            currentColour: 0,
+            addedToCart: false,
+            addingToCart: false
         }
 
         this.switchToTab = this.switchToTab.bind(this);
+        this.addToCart = this.addToCart.bind(this);
     }
 
     switchToTab(newTabIndex) {
         this.setState({
             currentTab: newTabIndex
+        });
+    }
+
+    addToCart(event) {
+        event.preventDefault();
+        this.setState({
+            addingToCart: true
+        }, () => {
+            setTimeout(() => {
+                this.setState({
+                    addingToCart: false,
+                    addedToCart: true
+                });
+            }, 2000);
         });
     }
 
@@ -88,9 +106,11 @@ class App extends React.Component {
                         </select>
                     </section>
 
-                    <footer className="actions">
-                        <button className="button-blue">Add To Cart</button>
-                    </footer>
+                    <Actions
+                        addToCart={this.addToCart}
+                        addingToCart={this.state.addingToCart}
+                        addedToCart={this.state.addedToCart} 
+                    />
 
                 </div>
             </div>
