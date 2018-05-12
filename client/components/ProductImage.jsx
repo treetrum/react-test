@@ -1,9 +1,14 @@
 import React from 'react';
 
-const ProdcutImage = ({ imageName }) => {
+const pathToImages = require.context('../resources/images/', true);
+
+const ProdcutImage = ({ imageName }) => {    
+
+    const imagePath = pathToImages(`./${imageName}`, true);
+
     return (
         <div className="product-image">
-            <img src={`../../client/resources/images/${imageName}`} />
+            <img src={imagePath} />
         </div>
     )
 }
