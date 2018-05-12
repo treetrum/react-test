@@ -94,7 +94,10 @@ class App extends React.Component {
                         switchTab={this.handleSwitchTab} 
                     />
 
-                    <ContentArea tabs={product.tabs} currentTabIndex={this.state.currentTab} />
+                    <ContentArea
+                        tabs={product.tabs}
+                        currentTabIndex={this.state.currentTab}
+                    />
 
                     <section className="price">
                         <p>
