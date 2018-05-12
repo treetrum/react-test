@@ -71,8 +71,12 @@ class App extends React.Component {
 
                     <section className="price">
                         <p>
-                            <span className="discounted">$59.99</span>
-                            <span className="original">$89.99</span>
+                            <span className="discounted">
+                                ${product.price.discounted}
+                            </span>
+                            <span className="original">
+                                ${product.price.original}
+                            </span>
                         </p>
                     </section>
 
