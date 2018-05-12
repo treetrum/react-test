@@ -8,6 +8,7 @@ import faArrowLeft from '@fortawesome/fontawesome-free-solid/faArrowLeft';
 import productData from '../data/product.json';
 
 // Components
+import ProductImage from './ProductImage.jsx';
 import TabBar from './TabBar.jsx';
 import ContentArea from './ContentArea.jsx';
 import Actions from './Actions.jsx';
@@ -62,13 +63,12 @@ class App extends React.Component {
     render() {
 
         let product = this.state.product;
+        let selectedColor = product.colours[this.state.currentColour];
 
         return (
             <div className="product-page">
 
-                <div className="product-image">
-                    <img src="../../client/resources/images/ath-msr7-black.jpg" />
-                </div>
+                <ProductImage imageName={selectedColor.image} />
 
                 <div className="product-detail">
 
