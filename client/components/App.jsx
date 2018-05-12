@@ -28,18 +28,18 @@ class App extends React.Component {
             addingToCart: false
         }
 
-        this.switchToTab = this.switchToTab.bind(this);
-        this.addToCart = this.addToCart.bind(this);
+        this.handleSwitchTab = this.handleSwitchTab.bind(this);
+        this.handleAddToCart = this.handleAddToCart.bind(this);
         this.handleColourChange = this.handleColourChange.bind(this);
     }
 
-    switchToTab(newTabIndex) {
+    handleSwitchTab(newTabIndex) {
         this.setState({
             currentTab: newTabIndex
         });
     }
 
-    addToCart(event) {
+    handleAddToCart(event) {
         event.preventDefault();
         this.setState({
             addingToCart: true
@@ -91,7 +91,7 @@ class App extends React.Component {
                     <TabBar 
                         tabs={product.tabs}
                         activeTabIndex={this.state.currentTab}
-                        switchTab={this.switchToTab} 
+                        switchTab={this.handleSwitchTab} 
                     />
 
                     <ContentArea tabs={product.tabs} currentTabIndex={this.state.currentTab} />
@@ -114,7 +114,7 @@ class App extends React.Component {
                     />
 
                     <Actions
-                        addToCart={this.addToCart}
+                        addToCart={this.handleAddToCart}
                         addingToCart={this.state.addingToCart}
                         addedToCart={this.state.addedToCart} 
                     />
