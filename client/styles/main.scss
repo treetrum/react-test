@@ -155,7 +155,7 @@ body {
         }
 
         .price {
-            margin-top: 40px;
+            margin-top: 30px;
             font-size: 2rem;
             font-weight: 700;
 
@@ -170,7 +170,7 @@ body {
         }
 
         .variations {
-            margin-top: 40px;
+            margin-top: 60px;
 
             label {
                 display: block;
@@ -178,6 +178,19 @@ body {
                 font-size: 14px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
+            }
+
+            select {
+                min-width: 150px;
+                padding: 10px;
+                padding-right: 40px;
+                border: 1px solid hsl(0, 0, 80%);
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8'?%3e%3csvg version='1.1' viewBox='0 0 8 4' xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3edropdown-chevron%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cg fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='7.4497 0 4.2249 3.2249 1 0' stroke='%23979797'/%3e%3c/g%3e%3c/svg%3e ");
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 10px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
             }
         }
 
