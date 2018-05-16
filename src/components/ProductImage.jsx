@@ -1,6 +1,6 @@
 import React from 'react';
 
-const pathToImages = require.context('../resources/images/', true);
+const pathToImages = require.context('../images/', true);
 
 const ProdcutImage = ({ imageName }) => {    
 
