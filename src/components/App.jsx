@@ -90,7 +90,7 @@ class App extends React.Component {
 
                     <TabBar 
                         tabs={product.tabs}
-                        activeTabIndex={this.state.currentTab}
+                        activeTabKey={this.state.currentTab}
                         switchTab={this.handleSwitchTab} 
                     />
 

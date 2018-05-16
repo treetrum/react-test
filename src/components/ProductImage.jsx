@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const pathToImages = require.context('../images/', true);
 
@@ -11,6 +12,10 @@ const ProdcutImage = ({ imageName }) => {
             <img src={imagePath} />
         </div>
     )
+}
+
+ProdcutImage.propTypes = {
+    imageName: PropTypes.string.isRequired
 }
 
 export default ProdcutImage;

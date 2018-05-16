@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Actions = ({ addToCart, addingToCart, addedToCart }) => {
 
@@ -35,6 +36,12 @@ const Actions = ({ addToCart, addingToCart, addedToCart }) => {
 
         </footer>
     );
+}
+
+Actions.propTypes = {
+    addToCart: PropTypes.func.isRequired,
+    addingToCart: PropTypes.bool.isRequired,
+    addedToCart: PropTypes.bool.isRequired
 }
 
 export default Actions;
